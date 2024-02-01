@@ -35,7 +35,7 @@ const App = () => {
     if (search.term.trim() === '') return
     if (!search.fetchSuggestion) return
 
-    const apiUrl = `${GOOGLE_PACES_API_BASE_URL}/autocomplete/json?key=AIzaSyCpff5ChTrWEIB97b5K9jMRK9ahjyP3ZDA&input=${search.term}`
+    const apiUrl = `${GOOGLE_PACES_API_BASE_URL}/autocomplete/json?key=${API_KEY}&input=${search.term}`
     try {
       const result = await axios.request({
         method: 'post',
